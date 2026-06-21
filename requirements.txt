@@ -1,0 +1,6 @@
+dotenv
+gradio
+openai
+ipykernel
+ipywidgets
+rich
