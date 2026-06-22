@@ -1,6 +1,27 @@
-dotenv
+# --- Existing Dependencies ---
+python-dotenv
 gradio
 openai
 ipykernel
 ipywidgets
 rich
+tiktoken
+numpy
+nbformat
+
+# --- Missing LangChain Core & Ecosystem ---
+langchain
+langchain-community
+langchain-openai
+langchain-huggingface
+langchain-chroma
+chromadb
+
+# --- Missing Data Analytics & Visualization ---
+scikit-learn
+plotly
+
+# --- Hugging Face & Deep Learning Engine ---
+transformers
+torch
+sentence-transformers

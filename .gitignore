@@ -20,6 +20,9 @@ env/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
+# Local vector database artifacts
+vector_db/
+
 # VS Code
 .vscode/
 
