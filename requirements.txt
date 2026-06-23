@@ -8,6 +8,7 @@ rich
 tiktoken
 numpy
 nbformat
+litellm
 
 # --- Missing LangChain Core & Ecosystem ---
 langchain

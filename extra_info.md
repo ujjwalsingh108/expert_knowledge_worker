@@ -39,3 +39,24 @@ If you were building an AI application from scratch, they would work in a pipeli
 1. `tiktoken` takes your text ("Hello World") and translates it into an array of numbers like `[15496, 995]`.
 
 2. `numpy` takes those numbers and structures them into massive coordinate grids (vectors and matrices) so the computer's processor can perform the heavy math required to predict the next word.
+
+
+### What is litellm ?
+
+`LiteLLM` acts as a __universal translation layer__. It maps everything to a single standardized format (the OpenAI schema). You write your code once using LiteLLM syntax, and you can switch your backend AI model simply by changing a single string name.
+
+#### Core Features of LiteLLM
+
+1. __Unified Interface__
+
+Instead of managing distinct python clients for different providers, you pass the data to LiteLLM’s completion() method. It handles the heavy translation under the hood:
+
+`import litellm`
+
+`##### Call OpenAI GPT-4`
+`response1 = litellm.completion(model="gpt-4", messages=[{"role": "user", "content": "Hi!"}])`
+
+`##### Call Anthropic Claude using the exact same code structure!`
+`response2 = litellm.completion(model="claude-3-5-sonnet", messages=[{"role": "user", "content": "Hi!"}])`
+
+LiteLLM includes a dynamic Router system. If your main AI service throws a rate limit error (HTTP 429), you can configure LiteLLM to automatically retry the request or seamlessly fall back to an alternate model or provider without crashing your user experience.
